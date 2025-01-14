@@ -1,0 +1,112 @@
+.center-flex {
+  display: flex;
+  justify-content: center; /* Aligns items horizontally */
+  align-items: center; /* Aligns items vertically */
+}.roadmap-container {
+    padding: 50px;
+    background-color: #f7f7f7;
+    width: 100%;
+    position: relative;
+  }
+  
+  .roadmap-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center; /* Center align all items */
+  }
+  
+  .roadmap-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 50%; /* Default to left side */
+    opacity: 0;
+    transform: translateX(-50px); /* Initially offset */
+    transition: opacity 1s, transform 1s; /* Smooth transition */
+  }
+  
+  .roadmap-item-right {
+    justify-content: flex-end; /* Right-aligned items */
+    transform: translateX(50px); /* Move items to the right */
+  }
+  
+  .roadmap-item-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .roadmap-item h3 {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .roadmap-item p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .roadmap-item-time {
+    font-size: 0.875rem;
+    color: #888;
+  }
+  
+  /* Central Line */
+  .roadmap-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #3498db;
+    transform: translateX(-50%);
+  }
+  
+  /* Show when in view */
+  .is-visible {
+    opacity: 1;
+    transform: translateX(0); /* On reveal, reset translation */
+  }
+  
+  .is-visible-right {
+    transform: translateX(0); /* For right-side elements, reset translation */
+  }
+  
+  @media (max-width: 768px) {
+    .roadmap-item {
+      width: 100%;
+    }
+  
+    .roadmap-item-right {
+      justify-content: flex-start;
+    }
+  }
+  
+
+  /* STYLE FOR THE hightlight */
+  .weather-highlight {
+    background-color: #f0f8ff; /* Light blue background */
+    border-left: 5px solid #007BFF; /* Blue border */
+    padding: 15px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark text */
+}
+
+.weather-highlight h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #007BFF; /* Blue text */
+}
+
+.weather-highlight p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* END OF THE STYLE OF THE hightlight */

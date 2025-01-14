@@ -1,0 +1,41 @@
+.map-container {
+  width: 80%;
+  height: 500px;
+  margin: 50px auto;
+  border: 10px solid #697565; /* Green border */
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  background: linear-gradient(135deg, #e3ffe7 0%, #d9e7ff 100%); /* Gradient background */
+  padding: 5px; /* Space between border and map */
+}
+
+.map-container:hover {
+  border-color: #3C3D37; /* Darker green on hover */
+  transform: scale(1.02); /* Slight zoom effect */
+  transition: all 0.3s ease;
+}
+
+/* MapWeather.css */
+.weather-synopsis {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+.weather-synopsis .rain {
+  color: blue;
+}
+
+.weather-synopsis .sunny {
+  color: orange;
+}
+
+.weather-synopsis .cloudy {
+  color: gray;
+}
+
+.weather-synopsis .mixed {
+  color: green;
+}
+
